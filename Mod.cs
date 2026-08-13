@@ -106,11 +106,25 @@ public class Mod(
 
             if (liveProps.Properties is not null)
             {
-                UpdateBasicProperties(config, item.Properties, liveProps.Properties);
+                try
+                {
+                    UpdateBasicProperties(config, item.Properties, liveProps.Properties);
+                }
+                catch (Exception ex)
+                {
+                    _logger.Warning($"Failed to update all properties for {item.Id}.", ex);
+                }
             }
             if (liveProps.SpecialProperties is not null)
             {
-                UpdateSpecialProperties(config, item.Properties, liveProps.SpecialProperties);
+                try
+                {
+                    UpdateSpecialProperties(config, item.Properties, liveProps.SpecialProperties);
+                }
+                catch (Exception ex)
+                {
+                    _logger.Warning($"Failed to update all special properties for {item.Id}.", ex);
+                }
             }
 
             var canSellOnFleaAfterUpdate = item.Properties.CanSellOnRagfair ?? false;
