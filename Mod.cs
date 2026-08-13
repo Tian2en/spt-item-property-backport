@@ -176,7 +176,7 @@ public class Mod(
                     {
                         indicesToRemove.Add(index);
                     }
-                    else if (index > buffs.Count)
+                    else if (index >= buffs.Count)
                     {
                         buffs.Add(buff);
                     }
