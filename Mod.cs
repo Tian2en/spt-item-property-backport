@@ -86,7 +86,8 @@ public class Mod(
                 continue;
             }
 
-            if ((config.IncludeItems.Count > 0) && !ContainsItemOrParent(config.IncludeItems, item))
+            var hasChanges = changes.TryGetValue(item.Id, out liveProps);
+            if (!hasChanges || (liveProps is null))
             {
                 continue;
             }
@@ -96,8 +97,7 @@ public class Mod(
                 continue;
             }
 
-            var hasChanges = changes.TryGetValue(item.Id, out liveProps);
-            if (!hasChanges || (liveProps is null))
+            if ((config.IncludeItems.Count > 0) && !ContainsItemOrParent(config.IncludeItems, item))
             {
                 continue;
             }
