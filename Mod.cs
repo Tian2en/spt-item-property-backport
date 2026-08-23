@@ -17,7 +17,7 @@ using Path = System.IO.Path;
 
 namespace ItemPropertyBackport;
 
-[Injectable(TypePriority = OnLoadOrder.PostLoad + 4)]
+[Injectable(TypePriority = OnLoadOrder.Preload + 4)]
 public class Mod(
     Config config,
     RagfairConfig _ragfairConfig,
