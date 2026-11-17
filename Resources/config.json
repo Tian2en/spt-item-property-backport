@@ -2,7 +2,7 @@
     "ExcludeProperties": [],
     "IncludeItems": [],
     "ExcludeItems": [],
-    "RemoveAmmoboxFleaLimit": false,
+    "RemoveAmmoboxFleaLimit": true,
     "UpdateGunsmith": true,
     "UnblacklistPricedItems": true,
     "AutoUpdate": true,
