@@ -1,5 +1,7 @@
 # Item Property Backport — json.tarkov.dev fork
 
+[![build](https://github.com/Tian2en/spt-item-property-backport/actions/workflows/build.yml/badge.svg)](https://github.com/Tian2en/spt-item-property-backport/actions/workflows/build.yml)
+
 A fork of [sgtlaggy/spt-item-property-backport](https://github.com/sgtlaggy/spt-item-property-backport)
 that keeps the data current.
 
